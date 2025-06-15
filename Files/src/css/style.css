@@ -72,12 +72,18 @@
     justify-content: space-between;
     align-items: center;
     height: 10vh;
-    background-color: var(--white-600);
+    background-color: transparent;
     position: fixed;
     width: 100%;
     z-index: 999;
+    color: white;
+    transition: background-color 2s ease-in-out;
 }
-
+.scrolled {
+    background-color: var(--white-600);
+    color: black;
+    transition: background-color 2s ease-in-out;
+}
 .mainTitle {
     font-size: 3em;
     font-family: var(--signature-font);
@@ -162,3 +168,28 @@ h1 {
     font-family: var(--text-font);
 }
 /*---Header---*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.footer {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 10vh;
+    background-color: gray;
+}
+.footerlink {
+    display: flex;
+    list-style: none;
+}
