@@ -11,19 +11,21 @@
             crossorigin="anonymous">
 
         <link rel="stylesheet" href="./src/css/main.css">
+        <link rel="shortcut icon" href="src/img/icon.ico" type="image/x-icon">
 
     </head>
     <body>
 
         <header>
             <div class="head">
-                <img src="src/img/logo.png" alt="" class="logo">
+                <img src="src/img/logo.png" alt class="logo">
                 <nav class="mainNav">
                     <ul class="mainUl">
                         <li><a href="index.html" class="link">Home</a></li>
                         <li><a href="gallery.html" class="link">Gallery</a></li>
                         <li><a href="album.html" class="link">Albums</a></li>
-                        <li><a href="contact.html" class="link active">Contact</a></li>
+                        <li><a href="contact.html"
+                                class="link active">Contact</a></li>
                     </ul>
                 </nav>
             </div>
@@ -36,21 +38,26 @@
             </div>
         </header>
 
-        <main class="contact">
+        <main class="contact" id="contact">
             <div class="separator"></div>
             <div class="contact">
                 <fieldset>
                     <legend>Contact Me</legend>
                     <form action="#" method="post">
                         <label for="lastName">Last Name</label>
-                        <input type="text" name="lastName" id="lastName" required placeholder="John">
+                        <input type="text" name="lastName" id="lastName"
+                            required placeholder="John">
                         <label for="firstName">First Name</label>
-                        <input type="text" name="firstName" id="firstName" required placeholder="Doe">
+                        <input type="text" name="firstName" id="firstName"
+                            required placeholder="Doe">
                         <label for="email">Mail</label>
-                        <input type="email" name="email" id="email" required placeholder="johndoe@mail.com">
+                        <input type="email" name="email" id="email" required
+                            placeholder="johndoe@mail.com">
                         <label for="message">Message</label>
-                        <textarea name="message" id="message" required placeholder="Write your message..." maxlength="200"></textarea>
-                    <button type="submit">Send</button>
+                        <textarea name="message" id="message" required
+                            placeholder="Write your message..."
+                            maxlength="200"></textarea>
+                        <button type="submit">Send</button>
                     </form>
                 </fieldset>
             </div>
@@ -59,13 +66,13 @@
         <footer>
             <div class="footer">
                 <div>
-                    <p class>Loïck LAURENT</p>
+                    <p>Loïck LAURENT -  &copy; 2025</p>
                 </div>
                 <div>
                     <ul class="footerlink">
                         <li><a href="#">Instagram</a></li>
-                        <li><a href="#">Terms of Use</a></li>
-                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="terms.html">Terms of Use</a></li>
+                        <li><a href="privacy.html">Privacy Policy</a></li>
                     </ul>
                 </div>
             </div>

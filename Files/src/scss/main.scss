@@ -85,18 +85,23 @@ h1 {
   border: 1px solid black;
   box-shadow: 5px 5px 5px black;
   margin: 2rem auto;
-
-  a {
-    text-decoration: none;
-    color: var(--black-500);
-    font-family: var(--text-font);
-  }
+  text-decoration: none;
+  font-family: var(--text-font);
+  transition: background-color 0.3s, color 0.3s;
 
   &:hover {
     background-color: var(--accent-hover);
     color: var(--grey-600);
   }
+
+  &:focus,
+  &:active {
+    background-color: var(--accent-hover) !important;
+    color: var(--grey-600);
+    outline: none;
+  }
 }
+
 
 .active {
   color: var(--gold-500) !important;
@@ -118,6 +123,9 @@ h1 {
     align-items: center;
     justify-content: center;
     gap: 2em;
+    opacity: 0;
+    animation: slideFadeIn 1s ease forwards;
+    animation-delay: 0.2s;
 
     p {
       font-family: var(--text-font);
@@ -151,6 +159,13 @@ main {
     display: flex;
     flex-direction: column;
     align-items: center;
+  }
+
+  img {
+    transition: transform 0.3s ease;
+    &:hover {
+      transform: scale(1.05);
+    }
   }
 }
 
@@ -330,6 +345,17 @@ main {
   to {
     transform: scale(0.8);
     opacity: 0;
+  }
+}
+
+@keyframes slideFadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100%{
+    opacity: 1;
+    transform: translateY(0);
   }
 }
 
