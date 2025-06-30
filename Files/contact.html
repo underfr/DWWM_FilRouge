@@ -3,20 +3,27 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Document</title>
-        <link rel="stylesheet" href="./src/css/style.css">
+        <title>Loïck LAURENT - Contact</title>
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr"
+            crossorigin="anonymous">
+
+        <link rel="stylesheet" href="./src/css/main.css">
+
     </head>
     <body>
 
         <header>
             <div class="head">
-                <p class="mainTitle">Loïck LAURENT</p>
+                <img src="src/img/logo.png" alt="" class="logo">
                 <nav class="mainNav">
-                    <ul>
-                        <li><a href="#" class="link active">Home</a></li>
-                        <li><a href="#" class="link">Gallery</a></li>
-                        <li><a href="#" class="link">Albums</a></li>
-                        <li><a href="#" class="link">Contact</a></li>
+                    <ul class="mainUl">
+                        <li><a href="index.html" class="link">Home</a></li>
+                        <li><a href="gallery.html" class="link">Gallery</a></li>
+                        <li><a href="album.html" class="link">Albums</a></li>
+                        <li><a href="contact.html" class="link active">Contact</a></li>
                     </ul>
                 </nav>
             </div>
@@ -24,73 +31,29 @@
                 <div class="heroText">
                     <h1>Welcome to my portfolio</h1>
                     <p>Explore my universe</p>
-                    <div class="btn">
-                        <a href="#">Discover</a>
-                    </div>
+                    <a href="#" class="btn">Discover</a>
                 </div>
             </div>
         </header>
 
-        <main>
-            <section class="carouselContainer">
-                <!-- Images en grille -->
-                <div class="separator">
-
-                </div>
-            </section>
-
-            <section class="containerLatestPhotos">
-                <h2>Explore Latest Photos</h2>
-                <p>Discover the newest additions to my collection</p>
-                <div class="latestPhotos">
-                    <div>
-                        <img src="https://picsum.photos/600/400" alt>
-                        <h4>Label</h4>
-                        <p>2025</p>
-                    </div>
-                    <div>
-                        <img src="https://picsum.photos/600/400" alt>
-                        <h4>Label</h4>
-                        <p>2025</p>
-                    </div>
-                    <div>
-                        <img src="https://picsum.photos/600/400" alt>
-                        <h4>Label</h4>
-                        <p>2025</p>
-                    </div>
-                </div>
-
-                <div class="btn">
-                    <a href="#">Button</a>
-                </div>
-                <div class="separator"></div>
-            </section>
-
-            <section class="containerLatestAlbums">
-                <h2>Explore Latest Albums</h2>
-                <p>Discover the newest albums</p>
-                <!-- Cartes albums -->
-                <div class="latestAlbums">
-                    <div>
-                        <img src="https://picsum.photos/id/684/600/400" alt>
-                        <h4>Label</h4>
-                        <p>2025</p>
-                    </div>
-                    <div>
-                        <img src="https://picsum.photos/id/684/600/400" alt>
-                        <h4>Label</h4>
-                        <p>2025</p>
-                    </div>
-                    <div>
-                        <img src="https://picsum.photos/id/684/600/400" alt>
-                        <h4>Label</h4>
-                        <p>2025</p>
-                    </div>
-                </div>
-                <div class="btn">
-                    <a href="#">Button</a>
-                </div>
-            </section>
+        <main class="contact">
+            <div class="separator"></div>
+            <div class="contact">
+                <fieldset>
+                    <legend>Contact Me</legend>
+                    <form action="#" method="post">
+                        <label for="lastName">Last Name</label>
+                        <input type="text" name="lastName" id="lastName" required placeholder="John">
+                        <label for="firstName">First Name</label>
+                        <input type="text" name="firstName" id="firstName" required placeholder="Doe">
+                        <label for="email">Mail</label>
+                        <input type="email" name="email" id="email" required placeholder="johndoe@mail.com">
+                        <label for="message">Message</label>
+                        <textarea name="message" id="message" required placeholder="Write your message..." maxlength="200"></textarea>
+                    <button type="submit">Send</button>
+                    </form>
+                </fieldset>
+            </div>
         </main>
 
         <footer>
@@ -108,6 +71,10 @@
             </div>
 
         </footer>
+        <script
+            src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
+            crossorigin="anonymous"></script>
         <script src="src/js/main.js"></script>
     </body>
 </html>

@@ -92,8 +92,8 @@ body {
     transition: background-color 0.5s ease-in-out;
 }
 .scrolled {
-    background-color: var(--light-bg);
-    color: var(--dark);
+    background-color: rgba(0, 0, 0, 0.75);
+    color: var(--white-100);
     transition: background-color 0.5s ease-in-out;
 }
 .mainTitle {
@@ -111,6 +111,7 @@ body {
     justify-content: space-evenly;
     list-style: none;
     font-family: var(--title-font);
+    font-size: 20px;
 }
 .mainNav ul li {
     margin: auto;
@@ -118,16 +119,16 @@ body {
 .link{
     color: var(--white-100);
     text-decoration: none;
-    text-shadow: 5px 5px 5px black;
+    font-weight: bold;
     transition: color 0.3s;
 }
 .link:hover,
 .linkBlack:hover {
-    color: var(--accent-hover);
+    color: 	var(--gold-500) !important;
 }
 
 .mainNav .linkBlack {
-    color: var(--dark);
+    color: var(--white-100);
 }
 
 
@@ -159,7 +160,7 @@ h1 {
     background-color: var(--accent-hover);
 }
 .active {
-    color: #cc9900
+    color: var(--gold-500)
 
  !important;
 }
@@ -287,7 +288,7 @@ main {
   background: var(--white-100);
   color: var(--black-500);
   padding: 2rem;
-  max-width: 70%;
+  max-width: 50%;
   max-height: 80%;
   overflow: auto;
   text-align: center;
@@ -334,7 +335,7 @@ main {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  background-color: rgba(255, 255, 255, 0.85);
+  background-color: rgba(255, 255, 255, 0);
   border: none;
   font-size: 2rem;
   cursor: pointer;
@@ -420,4 +421,93 @@ main {
     padding: 0;
     margin: 0 auto;
   }
+}
+.latestPhotos,
+.latestAlbums {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  justify-content: center;
+}
+
+.latestPhotos > div,
+.latestAlbums > div {
+  flex: 1 1 calc(30% - 1rem);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.containerLatestPhotos h2,
+.containerLatestPhotos p,
+.containerLatestAlbums h2,
+.containerLatestAlbums p {
+  text-align: center;
+}
+
+.btn {
+  margin: 2rem auto;
+  display: flex;
+  justify-content: center;
+}
+
+.carousel {
+  max-height: 500px;
+  overflow: hidden;
+}
+
+.carousel img {
+  object-fit: cover;
+  height: 100%;
+}
+
+@media screen and (max-width: 840px) {
+  .latestPhotos > div,
+  .latestAlbums > div {
+    flex: 1 1 100%;
+  }
+}
+
+
+.contact {
+  display: flex;
+  flex-direction: column;
+}
+
+.contact form {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  width: 30vw;
+}
+
+.contact input,.contact textarea {
+  border: none;
+  border-radius: 10px;
+  width: 100%;
+  padding: 10px;
+  resize: none;
+}
+
+.contact textarea {
+  height: 20vh;
+}
+
+.contact legend {
+  font-size: 40px;
+}
+
+.contact input:focus, .contact textarea:focus {
+  outline: 0.2em solid var(--gold-500);
+}
+
+.contact button {
+  border-radius: 10px;
+  border: none;
+  background-color: var(--gold-500);
+  margin: 1em 0;
+  padding: 1em;
+}
+.contact button:hover {
+  background-color: var(--gold-700);
 }

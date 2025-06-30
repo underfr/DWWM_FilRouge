@@ -120,17 +120,16 @@ body {
 .mainNav ul li {
   margin: auto;
 }
-.mainNav .link, .mainNav .linkBlack {
+.mainNav .link,
+.mainNav .linkBlack {
   color: var(--white-100);
   text-decoration: none;
   font-weight: bold;
   transition: color 0.3s;
 }
-.mainNav .link:hover, .mainNav .linkBlack:hover {
+.mainNav .link:hover,
+.mainNav .linkBlack:hover {
   color: var(--gold-500) !important;
-}
-.mainNav .linkBlack {
-  color: var(--white-100);
 }
 
 h1 {
@@ -160,6 +159,7 @@ h1 {
 }
 .btn:hover {
   background-color: var(--accent-hover);
+  color: var(--grey-600);
 }
 
 .active {
@@ -194,26 +194,32 @@ main {
   flex-wrap: wrap;
 }
 
-.containerLatestPhotos, .containerLatestAlbums {
+.containerLatestPhotos,
+.containerLatestAlbums {
   display: flex;
   flex-direction: column;
 }
 
-.latestPhotos, .latestAlbums {
+.latestPhotos,
+.latestAlbums {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   gap: 1.5rem;
   justify-content: center;
 }
-.latestPhotos > div, .latestAlbums > div {
+.latestPhotos > div,
+.latestAlbums > div {
   flex: 1 1 calc(30% - 1rem);
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-.containerLatestPhotos h2, .containerLatestPhotos p, .containerLatestAlbums h2, .containerLatestAlbums p {
+.containerLatestPhotos h2,
+.containerLatestPhotos p,
+.containerLatestAlbums h2,
+.containerLatestAlbums p {
   text-align: center;
 }
 
@@ -222,9 +228,10 @@ main {
   overflow: hidden;
 }
 .carousel img {
-  -o-object-fit: cover;
-     object-fit: cover;
+  -o-object-fit: contain;
+     object-fit: contain;
   height: 100%;
+  width: 100%;
 }
 
 .footer {
@@ -364,6 +371,12 @@ main {
     opacity: 1;
   }
 }
+@keyframes popupOut {
+  to {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+}
 .separator {
   width: 60%;
   height: 2px;
@@ -393,10 +406,66 @@ main {
   width: 10%;
   height: auto;
   margin: auto;
+  border-radius: 50%;
 }
 
 .none {
   display: none;
+}
+
+.contact {
+  display: flex;
+  flex-direction: column;
+}
+.contact legend {
+  font-family: var(--title-font);
+  font-size: 40px;
+}
+.contact form {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  width: 30vw;
+}
+.contact form input,
+.contact form textarea {
+  border: none;
+  border-radius: 10px;
+  width: 100%;
+  padding: 10px;
+  resize: none;
+}
+.contact form input:focus,
+.contact form textarea:focus {
+  outline: 0.2em solid var(--gold-500);
+}
+.contact form textarea {
+  height: 20vh;
+}
+.contact form legend {
+  font-size: 40px;
+}
+.contact form button {
+  width: 240px;
+  height: 48px;
+  background-color: var(--accent);
+  border-radius: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--black-500);
+  border: 1px solid black;
+  box-shadow: 5px 5px 5px black;
+  margin: 2rem auto;
+}
+.contact form button:hover {
+  background-color: var(--gold-700);
+  color: var(--grey-600);
+}
+
+.mainGallery {
+  display: flex;
+  flex-direction: column;
 }
 
 @media screen and (max-width: 840px) {

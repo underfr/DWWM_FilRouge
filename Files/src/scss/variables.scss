@@ -1,0 +1,78 @@
+:root {
+  /* --- Text variables --- */
+  /* --- Font --- */
+  --signature-font: "Waterfall", cursive;
+  --title-font: "Baskervville SC", serif;
+  --text-font: "Roboto", serif;
+
+  /* --- Size --- */
+  --text-large: 24px;
+  --text-medium: 20px;
+  --text-base: 18px;
+  --text-small: 16px;
+
+  /* --- Line Height --- */
+  --small-line: 24px;
+  --medium-line: 32px;
+  --base-line: 40px;
+  --large-line: 60px;
+
+  /* --- Color Variables --- */
+  /* --- Gold --- */
+  --gold-50: #fffbe6;
+  --gold-100: #fff3b0;
+  --gold-200: #ffed8a;
+  --gold-300: #ffe454;
+  --gold-400: #ffdf33;
+  --gold-500: #ffd700;
+  --gold-600: #e8c400;
+  --gold-700: #b59900;
+  --gold-800: #8c7600;
+  --gold-900: #6b5a00;
+
+  /* --- Grey --- */
+  --grey-50: #ededed;
+  --grey-100: #c8c8c8;
+  --grey-200: #aeaeae;
+  --grey-300: #898989;
+  --grey-400: #727272;
+  --grey-500: #4f4f4f;
+  --grey-600: #484848;
+  --grey-700: #383838;
+  --grey-800: #2b2b2b;
+  --grey-900: #212121;
+
+  /* --- Black --- */
+  --black-50: #e6e6e6;
+  --black-100: #b0b0b0;
+  --black-200: #8a8a8a;
+  --black-300: #545454;
+  --black-400: #333333;
+  --black-500: #000000;
+  --black-600: #000000;
+  --black-700: #000000;
+  --black-800: #000000;
+  --black-900: #000000;
+
+  /* --- White --- */
+  --white-50: #ffffff;
+  --white-100: #ffffff;
+  --white-200: #ffffff;
+  --white-300: #ffffff;
+  --white-400: #ffffff;
+  --white-500: #ffffff;
+  --white-600: #e8e8e8;
+  --white-700: #b5b5b5;
+  --white-800: #8c8c8c;
+  --white-900: #6b6b6b;
+
+  /* --- Others --- */
+  --dark: #040C0E;
+  --petrol: #132226;
+  --taupe: #A4978E;
+  --caramel: #BE9063;
+  --text: #ffffff;
+  --accent: #ffd700;
+  --accent-hover: #bfa100;
+  --light-bg: #f2f2f2;
+}
