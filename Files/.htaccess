@@ -1,0 +1,26 @@
+# Désactiver le listing des dossiers
+Options -Indexes
+
+# Bloquer l'accès direct aux fichiers sensibles (JS, CSS, SCSS) dans src
+<FilesMatch "\.(js|css|scss|map)$">
+    Order allow,deny
+    Deny from all
+</FilesMatch>
+
+# Autoriser explicitement les images dans src/img/photos
+<Directory "src/img/photos">
+    Order allow,deny
+    Allow from all
+</Directory>
+
+# Protéger aussi le dossier admin (éviter accès direct aux scripts)
+<Directory "admin">
+    Order allow,deny
+    Deny from all
+</Directory>
+
+# Protection contre hotlinking (vol d'image depuis un autre site)
+RewriteEngine On
+RewriteCond %{HTTP_REFERER} !^$
+RewriteCond %{HTTP_REFERER} !^https://(www\.)?tonsite\.com/ [NC]
+RewriteRule \.(jpg|jpeg|png|gif|webp|svg)$ - [F,NC,L]
