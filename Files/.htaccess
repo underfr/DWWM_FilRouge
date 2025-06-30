@@ -22,5 +22,6 @@ Options -Indexes
 # Protection contre hotlinking (vol d'image depuis un autre site)
 RewriteEngine On
 RewriteCond %{HTTP_REFERER} !^$
-RewriteCond %{HTTP_REFERER} !^https://(www\.)?tonsite\.com/ [NC]
+RewriteCond %{HTTP_REFERER} !^https://(www\.)?portfolio\.llaurent-dev\.fr/ [NC]
 RewriteRule \.(jpg|jpeg|png|gif|webp|svg)$ - [F,NC,L]
+
